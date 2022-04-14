@@ -1,0 +1,312 @@
+:root{
+     --main-color : #f3dd15;
+     --main-color-dark : #ffed4ad7;
+     --black : #393434;
+     --gray : #393434c4;
+ }
+
+*{
+    font-family: 'Mukta', sans-serif;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* GLOBAL */
+
+.color-text-main{
+    color: var(--main-color);
+}
+.color-text-black{
+    color: var(--black)
+}
+.color-text-gray{
+    color: var(--gray);
+}
+.btn-head-presto{
+    color: var(--gray);
+    background-color: var(--main-color);
+    text-transform: uppercase;
+    font-weight: 600;
+    border-radius: 0px;
+    border: 1px solid transparent;
+    padding: 1rem 1.5rem;
+    font-size: 1rem;
+    box-shadow: .15s ease-in-out;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.btn-head-presto:hover{
+    color: var(--black);
+    background-color: var(--main-color-dark);
+    border-radius: 0px;
+    font-size: 1rem;
+}
+
+.line-decoration{
+    position: relative;
+}
+.line-decoration::before{
+    content: '';
+    width: 100px;
+    height: 4px;
+    background-color: var(--main-color);
+    position: relative;
+    display: inline-block;
+    transform: translateY(-150%);
+    margin-right: 20px;
+}
+
+/* .btn:focus {
+    box-shadow: none !important;
+} */
+
+/* HEADER */
+
+header{
+    padding: 30px 30px 0px 30px;
+}
+
+.head-presto{
+    height: calc(100vh - 50px);
+    background: linear-gradient(#0000009a,#0000009a) , url('./img-presto/img-head.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+/* NAVBAR */
+
+.navbar-presto{
+   margin: 0px 50px;
+   border-bottom: 1px solid var(--black);
+   transition: 0.3s;
+   background-color: white;
+}
+
+.navbar-presto .quotes-links{
+   min-width: 150px;
+}
+
+.navbar-presto .nav-link , .navbar-presto .navbar-brand{
+    color: var(--gray);
+    text-transform: uppercase;
+    font-weight: 500;
+    padding: 0px 20px !important;
+    transition: 0.5s;
+}
+
+.navbar-presto .nav-link:hover , .navbar-presto .navbar-brand:hover{
+    transform: scale(1.15);
+    color: var(--black);
+}
+
+.navbar-presto .nav-link.dropdown-toggle:hover{
+    transform: scale(1);
+    color: var(--black);
+}
+
+.navbar-toggler:focus{
+    box-shadow: none;
+}
+
+.navbar-toggler i{
+    transition: 0.7s;
+}
+
+.navbar-presto .dropdown-toggle::after{
+    transform: rotate(0deg);
+    transition: 0.7s;
+}
+
+.navbar-presto .show.dropdown-toggle::after{
+    transform: rotate(90deg);
+}
+
+/* CATEGORIE */
+.card-category{
+    max-width: 350px;
+    margin: auto;
+}
+.number-category{
+    position: absolute;
+    left: 50%;
+    top: -40px;
+    font-size: 50px;
+    font-weight: bold;
+    color: var(--main-color);
+    transform: translateX(-50%);
+    z-index: 1010;
+    transition: 0.7s;
+}
+.img-container .overlay{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(88, 86, 86, 0.048);
+    position: absolute;
+    padding: 40px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    transition: 0.7s;
+}
+.img-container .overlay p{
+    opacity: 0;
+    transition: 0.7s;
+}
+.card-category .category-title{
+    color: var(--black);
+    transition: 0.7s;
+}
+.card-category:hover .number-category{
+    font-size: 55px;
+}
+.card-category:hover .img-container .overlay{
+    background-color: rgba(14, 14, 14, 0.452);
+}
+.card-category:hover .img-container .overlay p{
+    opacity: 1;
+}
+.card-category:hover .category-title{
+    color: var(--main-color);
+}
+
+
+/* SEZIONE CALL TO ACTION BACKGROUND */
+
+.cta-background{
+  background: linear-gradient(#000000ad,#000000ad) , url('./img-presto/cta-background.jpg');
+  width: 100%;
+  height: 70vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.input-search input{
+    padding: 10px 15px;
+    border-radius: 0px;
+    background: #4947472a;
+    backdrop-filter: blur(20px);
+    background-color: transparent;
+    transition: 0.5s;
+}
+.form-control:focus{
+    background: #aca5a591;
+    box-shadow: none;
+    border-color: transparent;
+}
+.form-control::placeholder{
+    color:rgba(255, 255, 255, 0.514);
+}
+.input-search button{
+     border-color: var(--main-color);
+     color: white;
+}
+.input-search button:hover{
+    color: var(--black);
+    background: var(--main-color);
+}
+
+/* SEZIONE I NOSTRI ANNUNCI */
+
+.card-product .card-image{
+    position: relative;
+    overflow: hidden;
+    max-width: 300px;
+    margin: auto;
+}
+.card-product .card-image .overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(54, 53, 53, 0.329);
+    transition: 0.5s;
+    z-index: 1;
+}
+.card-product .card-image img{
+    transition: 0.5s;
+ }
+.card-product:hover .card-image .overlay{
+    background-color: rgba(114, 111, 111, 0.219);
+}
+.card-product:hover .card-image img{
+   transform: scale(1.2);
+}
+.swiper-button-next::after, .swiper-button-prev::after{
+    color: var(--main-color);
+}
+.swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active{
+    background: var(--main-color);
+}
+
+/* SEZIONE PAGE ANNUNCI */
+
+.head-presto-annunci{
+    height: calc(90vh - 50px);
+    background: linear-gradient(#0000009a,#0000009a) , url('./img-presto/head-presto-annunci.jpg');
+    background-size: cover;
+    background-position: bottom center;
+}
+
+
+
+/* SEZIONE FILTRI */
+
+#accordionFilters .accordion-button{
+    background-color: transparent;
+}
+#accordionFilters .accordion-item{
+   border: none;
+}
+#accordionFilters .accordion-button:not(.collapsed){
+     box-shadow: none;
+     color: var(--main-color);
+     text-transform: uppercase;
+     font-family: 600;
+ }
+ #accordionFilters .accordion-button:focus{
+    box-shadow: none;
+ }
+ #accordionFilters .accordion-button:after{
+   background-image: none;
+   display: inline-block;
+   text-rendering: auto;
+   -webkit-font-smoothing: antialiased;
+   font: var(--fa-font-solid);
+   content: "\f078";
+ }
+ .accordion-button:not(.collapsed)::after {
+    transform: rotate(-90deg);
+    transition: 0.7s;
+}
+
+.form-control:focus{
+    background: #e7e7e76c;
+}
+
+
+/* MEDIA QUERY */
+
+@media screen and (max-width: 400px){
+    .line-decoration::before{
+        content: '';
+        width: 100px;
+        height: 4px;
+        background-color: var(--main-color);
+        position: relative;
+        display: inline-block;
+        transform: translateY(-150%);
+        margin-right: 20px;
+    }
+    .head-presto{
+        height: calc(50vh)
+    }
+    .cta-background{
+        height: 50vh;
+      }
+
+    header{
+        padding: 0px;
+    }
+
+    .head-presto-annunci{
+        height: calc(50vh)
+    }
+}
